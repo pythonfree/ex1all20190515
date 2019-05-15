@@ -108,18 +108,28 @@ IncludeTemplateLangFile(__FILE__);
     <!-- footer -->
     <footer class="footer">
         <div class="inner-wrap">
+			
+			
             <nav class="main-menu">
-                <div class="item">
-                    <div class="title-block">О магазине</div>
-                    <ul>
-                        <li><a href="">Отзывы</a>
-                        </li>
-                        <li><a href="">Руководство </a>
-                        </li>
-                        <li><a href="">История</a>
-                        </li>
-                    </ul>
-                </div>
+				
+			<?$APPLICATION->IncludeComponent(
+				"bitrix:menu",
+				"bottom",
+				Array(
+					"COMPONENT_TEMPLATE" => ".default",
+					"ROOT_MENU_TYPE" => "bottom",
+					"MENU_CACHE_TYPE" => "N",
+					"MENU_CACHE_TIME" => "3600",
+					"MENU_CACHE_USE_GROUPS" => "Y",
+					"MENU_CACHE_GET_VARS" => "",
+					"MAX_LEVEL" => "1",
+					"CHILD_MENU_TYPE" => "bottom",
+					"USE_EXT" => "N",
+					"DELAY" => "N",
+					"ALLOW_MULTI_SELECT" => "N"
+				)
+			);?>
+				
                 <div class="item">
                     <div class="title-block">Каталог товаров</div>
                     <ul>
@@ -146,6 +156,8 @@ IncludeTemplateLangFile(__FILE__);
                     </ul>
                 </div>
             </nav>
+			
+			
             <div class="contacts-block">
                 <div class="title-block"><?=GetMessage('CONTACT_INFO')?></div>
                 <div class="loc-block">
