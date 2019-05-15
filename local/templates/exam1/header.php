@@ -107,13 +107,17 @@ IncludeTemplateLangFile(__FILE__);
         
         <?if($APPLICATION->GetCurPage(false) !== '/'):?>
         <!-- breadcrumbs -->
-        <div class="breadcrumbs-box">
-            <div class="inner-wrap">
-                <a href="">Главная</a>
-                <a href="">Мебель</a>
-                <span>Выставки и события</span>
-            </div>
-        </div>
+        <?$APPLICATION->IncludeComponent(
+            "bitrix:breadcrumb", 
+            "breadcrumb", 
+            array(
+                "COMPONENT_TEMPLATE" => "breadcrumb",
+                "START_FROM" => "0",
+                "PATH" => "",
+                "SITE_ID" => "s1"
+            ),
+            false
+        );?>
         <!-- /breadcrumbs -->
         <?endif;?>
         
