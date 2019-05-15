@@ -2,7 +2,7 @@
 
 <?if (!empty($arResult)):?>
 
-<?//echo '<pre>'; var_dump($arResult); echo '</pre>';?>
+<?//echo '<pre>'; var_dump($arParams); echo '</pre>';?>
 
 <nav class="nav">
 	<div class="inner-wrap">
@@ -23,7 +23,8 @@ foreach($arResult as $arItem):?>
 
 		<?if ($arItem["DEPTH_LEVEL"] == 1):?>
 			<li>
-				<a href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a>
+				<a class="<?=$arItem['PARAMS']["COLOR"] ? 'color-' . $arItem['PARAMS']["COLOR"] : ''?>"
+				   href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a>
 				<ul>
 				<?if($arItem['PARAMS']['DESCR'] !== ''):?>
 				<div class="menu-text"><?=$arItem['PARAMS']["DESCR"]?></div>
@@ -43,9 +44,12 @@ foreach($arResult as $arItem):?>
 
 			<?if ($arItem["DEPTH_LEVEL"] == 1):?>
 				<?if($arItem["TEXT"] === 'Главная'):?>
-					<li class="main-page"><a href="/"><?=$arItem["TEXT"]?></a>
+					<li class="main-page">
+						<a href="/"><?=$arItem["TEXT"]?></a>
 				<?else:?>			
-					<li><a href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a></li>
+					<li>
+					<a class="<?=$arItem['PARAMS']["COLOR"] ? 'color-' . $arItem['PARAMS']["COLOR"] : ''?>"
+					   href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a></li>
 				<?endif;?>	
 			<?else:?>
 				<li><a href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a></li>
