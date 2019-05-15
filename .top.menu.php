@@ -1,38 +1,45 @@
 <?
 $aMenuLinks = Array(
 	Array(
+		"Главная", 
+		"/", 
+		Array(), 
+		Array("DESCR"=>""), 
+		"" 
+	),
+	Array(
 		"Компания", 
 		"company/", 
 		Array(), 
-		Array(), 
+		Array("DESCR"=>"это текст для пункта \"Компания\""), 
 		"" 
 	),
 	Array(
 		"Новости", 
 		"news/", 
 		Array(), 
-		Array(), 
+		Array("DESCR"=>"news"), 
 		"" 
 	),
 	Array(
-		"Продукция", 
+		"Каталог", 
 		"products/", 
 		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Услуги", 
-		"services/", 
-		Array(), 
-		Array(), 
+		Array("DESCR"=>""), 
 		"" 
 	),
 	Array(
 		"Партнерам", 
 		"/partneram/", 
 		Array(), 
+		Array("DESCR"=>""), 
+		"" 
+	),
+	Array(
+		"Услуги", 
+		"services/", 
 		Array(), 
+		Array("DESCR"=>""), 
 		"" 
 	)
 );

@@ -8,6 +8,29 @@ IncludeTemplateLangFile(__FILE__);
                 <!-- /content -->
                 <!-- side -->
                 <div class="side">
+					
+					<?if($APPLICATION->GetCurPage(false) !== '/'):?>
+                    <!-- side menu -->
+					<?$APPLICATION->IncludeComponent(
+						"bitrix:menu",
+						"left",
+						Array(
+							"COMPONENT_TEMPLATE" => "left",
+							"ROOT_MENU_TYPE" => "left",
+							"MENU_CACHE_TYPE" => "N",
+							"MENU_CACHE_TIME" => "3600",
+							"MENU_CACHE_USE_GROUPS" => "Y",
+							"MENU_CACHE_GET_VARS" => array(),
+							"MAX_LEVEL" => "1",
+							"CHILD_MENU_TYPE" => "left",
+							"USE_EXT" => "Y",
+							"DELAY" => "N",
+							"ALLOW_MULTI_SELECT" => "N"
+						)
+					);?>
+                    <!-- /side menu -->
+					<?endif;?>
+					
                     <!-- side anonse -->
                     <div class="side-block side-anonse">
                         <div class="title-block"><span class="i i-title01"></span>Полезная информация!</div>
