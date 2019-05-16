@@ -134,6 +134,7 @@ IncludeTemplateLangFile(__FILE__);
                         <header>
                             <h1><?$APPLICATION->ShowTitle(false);?></h1>
                         </header>
+                        <hr>
                         <?endif;?>
                         
                         

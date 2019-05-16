@@ -1,13 +1,6 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"Отзывы", 
-		"/rews/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
 		"Руководство", 
 		"/company/management.php", 
 		Array(), 
