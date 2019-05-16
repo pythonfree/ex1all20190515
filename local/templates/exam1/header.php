@@ -54,10 +54,14 @@ IncludeTemplateLangFile(__FILE__);
                     <div class="shedule">время работы с 9-00 до 18-00</div>
                 </div>
                 <div class="actions-block">
-                    <form action="/" class="main-frm-search">
-                        <input type="text" placeholder="Поиск">
-                        <button type="submit"></button>
-                    </form>
+                    
+                    <?$APPLICATION->IncludeComponent(
+                        "bitrix:search.form",
+                        "search_on_top",
+                        Array(
+                        )
+                    );?>
+                    
                     <nav class="menu-block">
                         <ul>
                             <li class="att popup-wrap">
