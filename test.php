@@ -6,9 +6,9 @@ $APPLICATION->SetTitle("test");
 	"",
 	Array(
 		"COMPONENT_TEMPLATE" => ".default",
-		"AREA_FILE_SHOW" => "file",
+		"AREA_FILE_SHOW" => "sect",
 		"AREA_FILE_SUFFIX" => "inc",
 		"EDIT_TEMPLATE" => "",
-		"PATH" => "/include/footer_phone.php"
+		"AREA_FILE_RECURSIVE" => "Y"
 	)
 );?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
