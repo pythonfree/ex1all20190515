@@ -1,5 +1,6 @@
 <?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
 <?if (!empty($arResult)):?>
+<?//mydump2($arResult);?>
 <div class="side-block side-menu">
 	<div class="title-block <?=$APPLICATION->ShowTitle('color_head');?>"><?=GetMessage("T_EXAM_MENU_TITLE")?></div>
 	<div class="menu-block">

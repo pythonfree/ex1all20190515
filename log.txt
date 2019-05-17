@@ -1,0 +1,10 @@
+Host: localhost
+Date: 2019-05-17 16:52:26
+Module: 
+Запись с кодом 2 изменена.
+    MyClass::OnAfterUserUpdateHandler < call_user_func_array < ExecuteModuleEventEx < CAllUser::Update < require_once
+	/home/bitrix_exam/www/bitrix/modules/main/classes/general/module.php:475
+	/home/bitrix_exam/www/bitrix/modules/main/classes/general/user.php:2202
+	/home/bitrix_exam/www/bitrix/modules/main/admin/user_edit.php:286
+	/home/bitrix_exam/www/bitrix/admin/user_edit.php:2
+----------
